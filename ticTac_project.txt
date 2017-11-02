@@ -1,0 +1,10 @@
+
+push to git hub
+work on smart computer for tic tac
+create graphics
+link to browser with flask
+
+learn goals:
+save stuff into database
+access stuff from database later
+data analysis of the tic tac data
