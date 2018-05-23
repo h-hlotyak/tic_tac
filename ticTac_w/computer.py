@@ -366,258 +366,257 @@ def computer_win_diagonal():
 
 def computer_block_rows():
     """
-        check for X immediate win to block
-        """
-
-        # check the first row
-        for spot in board["first_row"]:
-            if spot == "_X_":  # if the spot is an 'O' then add 1
-                x_count = x_count + 1
-            if spot == "___":  # if the sport is empty add 1 to empty count
-                empty_count = empty_count + 1
-            else:
+    check for X immediate win to block
+    """
+    # check the first row
+    for spot in board["first_row"]:
+        if spot == "_X_":  # if the spot is an 'O' then add 1
+            x_count = x_count + 1
+        if spot == "___":  # if the sport is empty add 1 to empty count
+            empty_count = empty_count + 1
+        else:
+            pass
+    if x_count == 2 and empty_count == 1:  # if there are 2 'O's and 1 empty
+        for spot in board["first_row"]:  # find the empty spot
+            if spot == "___":
+                spot = "_O_"  # change it to an 'o'
+                computer_check_immediate_win = False  # end while loop
+            else:  # if the spot isnt empty, pass
                 pass
-        if x_count == 2 and empty_count == 1:  # if there are 2 'O's and 1 empty
-            for spot in board["first_row"]:  # find the empty spot
-                if spot == "___":
-                    spot = "_O_"  # change it to an 'o'
-                    computer_check_immediate_win = False  # end while loop
-                else:  # if the spot isnt empty, pass
-                    pass
 
-        x_count = 0
-        empty_count = 0
+    x_count = 0
+    empty_count = 0
 
-        # check the second row
-        for spot in board["second_row"]:
-            if spot == "_X_":  # if the spot is an 'O' then add 1
-                x_count = x_count + 1
-            if spot == "___":  # if the sport is empty add 1 to empty count
-                empty_count = empty_count + 1
-            else:
+    # check the second row
+    for spot in board["second_row"]:
+        if spot == "_X_":  # if the spot is an 'O' then add 1
+            x_count = x_count + 1
+        if spot == "___":  # if the sport is empty add 1 to empty count
+            empty_count = empty_count + 1
+        else:
+            pass
+    if x_count == 2 and empty_count == 1:  # if there are 2 'O's and 1 empty
+        for spot in board["second_row"]:  # find the empty spot
+            if spot == "___":
+                spot = "_O_"  # change it to an 'o'
+                computer_check_immediate_win = False  # end while loop
+            else:  # if the spot isnt empty, pass
                 pass
-        if x_count == 2 and empty_count == 1:  # if there are 2 'O's and 1 empty
-            for spot in board["second_row"]:  # find the empty spot
-                if spot == "___":
-                    spot = "_O_"  # change it to an 'o'
-                    computer_check_immediate_win = False  # end while loop
-                else:  # if the spot isnt empty, pass
-                    pass
 
-        x_count = 0
-        empty_count = 0
+    x_count = 0
+    empty_count = 0
 
-         #check third row
+     #check third row
 
-        for spot in board["third_row"]:
-            if spot == "_X_":  # if the spot is an 'O' then add 1
-                x_count = x_count + 1
-            if spot == "___":  # if the sport is empty add 1 to empty count
-                empty_count = empty_count + 1
-            else:
+    for spot in board["third_row"]:
+        if spot == "_X_":  # if the spot is an 'O' then add 1
+            x_count = x_count + 1
+        if spot == "___":  # if the sport is empty add 1 to empty count
+            empty_count = empty_count + 1
+        else:
+            pass
+    if x_count == 2 and empty_count == 1:  # if there are 2 'O's and 1 empty
+        for spot in board["third_row"]:  # find the empty spot
+            if spot == "___":
+                spot = "_O_"  # change it to an 'o'
+                computer_check_immediate_win = False  # end while loop
+            else:  # if the spot isnt empty, pass
                 pass
-        if x_count == 2 and empty_count == 1:  # if there are 2 'O's and 1 empty
-            for spot in board["third_row"]:  # find the empty spot
-                if spot == "___":
-                    spot = "_O_"  # change it to an 'o'
-                    computer_check_immediate_win = False  # end while loop
-                else:  # if the spot isnt empty, pass
-                    pass
 
-        x_count = 0
-        empty_count = 0
+    x_count = 0
+    empty_count = 0
 
 def computer_block_collums():
-     # checking collums for block
+ # checking collums for block
 
-        # first collum
-        top_space = board["first_row"][0]
-        middle_space = board["second_row"][0]
-        bottom_space = board["third_row"][0]
+    # first collum
+    top_space = board["first_row"][0]
+    middle_space = board["second_row"][0]
+    bottom_space = board["third_row"][0]
 
-        if top_space == "_X_":  # checks if there is an o
-            x_count = x_count + 1  # add 1
-        if top_space == "___":  # checks if empty
-            empty_count = empty_count + 1  # add 1
-        else:
-            pass
+    if top_space == "_X_":  # checks if there is an o
+        x_count = x_count + 1  # add 1
+    if top_space == "___":  # checks if empty
+        empty_count = empty_count + 1  # add 1
+    else:
+        pass
 
-        if middle_space == "_X_":  # checks if there is an o
-            x_count = x_count + 1  # add 1
-        if middle_space == "___":  # checks if empty
-            empty_count = empty_count + 1  # add 1
-        else:
-            pass
+    if middle_space == "_X_":  # checks if there is an o
+        x_count = x_count + 1  # add 1
+    if middle_space == "___":  # checks if empty
+        empty_count = empty_count + 1  # add 1
+    else:
+        pass
 
-        if bottom_space == "_X_":  # checks if there is an o
-            x_count = x_count + 1  # add 1
-        if bottom_space == "___":  # checks if empty
-            empty_count = empty_count + 1  # add 1
-        else:
-            pass
+    if bottom_space == "_X_":  # checks if there is an o
+        x_count = x_count + 1  # add 1
+    if bottom_space == "___":  # checks if empty
+        empty_count = empty_count + 1  # add 1
+    else:
+        pass
 
-        if x_count == 2 and empty_count == 1:  # if thers 2 o's and an empty spot,  find the empty spot
-            if top_space == "___":
-                board["first_row"][0] = "_O_"  # and change it to an 'o'
-            if middle_space == "___":
-                board["second_row"][0] = "_O_"
-            if bottom_space == "___":
-                board["third_row"][0] = "_O_"
-            computer_check_immediate_win = False
+    if x_count == 2 and empty_count == 1:  # if thers 2 o's and an empty spot,  find the empty spot
+        if top_space == "___":
+            board["first_row"][0] = "_O_"  # and change it to an 'o'
+        if middle_space == "___":
+            board["second_row"][0] = "_O_"
+        if bottom_space == "___":
+            board["third_row"][0] = "_O_"
+        computer_check_immediate_win = False
 
-        x_count = 0
-        empty_count = 0
+    x_count = 0
+    empty_count = 0
 
-        # second collum
-        top_space = board["first_row"][1]
-        middle_space = board["second_row"][1]
-        bottom_space = board["third_row"][1]
+    # second collum
+    top_space = board["first_row"][1]
+    middle_space = board["second_row"][1]
+    bottom_space = board["third_row"][1]
 
-        if top_space == "_X_":  # checks if there is an o
-            x_count = x_count + 1  # add 1
-        if top_space == "___":  # checks if empty
-            empty_count = empty_count + 1  # add 1
-        else:
-            pass
+    if top_space == "_X_":  # checks if there is an o
+        x_count = x_count + 1  # add 1
+    if top_space == "___":  # checks if empty
+        empty_count = empty_count + 1  # add 1
+    else:
+        pass
 
-        if middle_space == "_X_":  # checks if there is an o
-            x_count = x_count + 1  # add 1
-        if middle_space == "___":  # checks if empty
-            empty_count = empty_count + 1  # add 1
-        else:
-            pass
+    if middle_space == "_X_":  # checks if there is an o
+        x_count = x_count + 1  # add 1
+    if middle_space == "___":  # checks if empty
+        empty_count = empty_count + 1  # add 1
+    else:
+        pass
 
-        if bottom_space == "_X_":  # checks if there is an o
-            x_count = x_count + 1  # add 1
-        if bottom_space == "___":  # checks if empty
-            empty_count = empty_count + 1  # add 1
-        else:
-            pass
+    if bottom_space == "_X_":  # checks if there is an o
+        x_count = x_count + 1  # add 1
+    if bottom_space == "___":  # checks if empty
+        empty_count = empty_count + 1  # add 1
+    else:
+        pass
 
-        if x_count == 2 and empty_count == 1:  # if thers 2 o's and an empty spot,  find the empty spot
-            if top_space == "___":
-                board["first_row"][1] = "_O_"  # and change it to an 'o'
-            if middle_space == "___":
-                board["second_row"][1] = "_O_"
-            if bottom_space == "___":
-                board["third_row"][1] = "_O_"
-            computer_check_immediate_win = False
+    if x_count == 2 and empty_count == 1:  # if thers 2 o's and an empty spot,  find the empty spot
+        if top_space == "___":
+            board["first_row"][1] = "_O_"  # and change it to an 'o'
+        if middle_space == "___":
+            board["second_row"][1] = "_O_"
+        if bottom_space == "___":
+            board["third_row"][1] = "_O_"
+        computer_check_immediate_win = False
 
-        x_count = 0
-        empty_count = 0
+    x_count = 0
+    empty_count = 0
 
-        # third collum
-        top_space = board["first_row"][2]
-        middle_space = board["second_row"][2]
-        bottom_space = board["third_row"][2]
+    # third collum
+    top_space = board["first_row"][2]
+    middle_space = board["second_row"][2]
+    bottom_space = board["third_row"][2]
 
-        if top_space == "_X_":  # checks if there is an o
-            x_count = x_count + 1  # add 1
-        if top_space == "___":  # checks if empty
-            empty_count = empty_count + 1  # add 1
-        else:
-            pass
+    if top_space == "_X_":  # checks if there is an o
+        x_count = x_count + 1  # add 1
+    if top_space == "___":  # checks if empty
+        empty_count = empty_count + 1  # add 1
+    else:
+        pass
 
-        if middle_space == "_X_":  # checks if there is an o
-            x_count = x_count + 1  # add 1
-        if middle_space == "___":  # checks if empty
-            empty_count = empty_count + 1  # add 1
-        else:
-            pass
+    if middle_space == "_X_":  # checks if there is an o
+        x_count = x_count + 1  # add 1
+    if middle_space == "___":  # checks if empty
+        empty_count = empty_count + 1  # add 1
+    else:
+        pass
 
-        if bottom_space == "_X_":  # checks if there is an o
-            x_count = x_count + 1  # add 1
-        if bottom_space == "___":  # checks if empty
-            empty_count = empty_count + 1  # add 1
-        else:
-            pass
+    if bottom_space == "_X_":  # checks if there is an o
+        x_count = x_count + 1  # add 1
+    if bottom_space == "___":  # checks if empty
+        empty_count = empty_count + 1  # add 1
+    else:
+        pass
 
-        if x_count == 2 and empty_count == 1:  # if thers 2 o's and an empty spot,  find the empty spot
-            if top_space == "___":
-                board["first_row"][2] = "_O_"  # and change it to an 'o'
-            if middle_space == "___":
-                board["second_row"][2] = "_O_"
-            if bottom_space == "___":
-                board["third_row"][2] = "_O_"
-            computer_check_immediate_win = False
+    if x_count == 2 and empty_count == 1:  # if thers 2 o's and an empty spot,  find the empty spot
+        if top_space == "___":
+            board["first_row"][2] = "_O_"  # and change it to an 'o'
+        if middle_space == "___":
+            board["second_row"][2] = "_O_"
+        if bottom_space == "___":
+            board["third_row"][2] = "_O_"
+        computer_check_immediate_win = False
 
-        x_count = 0
-        empty_count = 0
+    x_count = 0
+    empty_count = 0
 
 def computer_block_diagonal():
 
-        #diagonals
-        '''
+    #diagonals
+    '''
+    X
         X
             X
-                X
-        '''
-        top_space = board["first_row"][0]
-        middle_space = board["second_row"][1]
-        bottom_space = board["third_row"][2]
+    '''
+    top_space = board["first_row"][0]
+    middle_space = board["second_row"][1]
+    bottom_space = board["third_row"][2]
 
-        if top_space == "_X_":
-            x_count = x_count + 1
+    if top_space == "_X_":
+        x_count = x_count + 1
+    if top_space == "___":
+        empty_count = empty_count + 1
+
+    if middle_space == "_X_":
+        x_count = x_count + 1
+    if middle_space == "___":
+        empty_count = empty_count + 1
+
+    if bottom_space == "_X_":
+        x_count = x_count + 1
+    if bottom_space == "___":
+        empty_count = empty_count + 1
+
+    if x_count == 2 and empty_count == 1:
         if top_space == "___":
-            empty_count = empty_count + 1
-
-        if middle_space == "_X_":
-            x_count = x_count + 1
+            board["first_row"][0] = "_O_"
         if middle_space == "___":
-            empty_count = empty_count + 1
-
-        if bottom_space == "_X_":
-            x_count = x_count + 1
+            board["second_row"][1] = "_O_"
         if bottom_space == "___":
-            empty_count = empty_count + 1
+            board["third_row"][2] = "_O_"
+        computer_check_immediate_win = False
 
-        if x_count == 2 and empty_count == 1:
-            if top_space == "___":
-                board["first_row"][0] = "_O_"
-            if middle_space == "___":
-                board["second_row"][1] = "_O_"
-            if bottom_space == "___":
-                board["third_row"][2] = "_O_"
-            computer_check_immediate_win = False
+    x_count = 0
+    empty_count = 0
 
-        x_count = 0
-        empty_count = 0
-
-        """
-                X
+    """
             X
         X
-        """
-        top_space = board["first_row"][2]
-        middle_space = board["second_row"][1]
-        bottom_space = board["third_row"][0]
+    X
+    """
+    top_space = board["first_row"][2]
+    middle_space = board["second_row"][1]
+    bottom_space = board["third_row"][0]
 
-        if top_space == "_X_":
-            x_count = x_count + 1
+    if top_space == "_X_":
+        x_count = x_count + 1
+    if top_space == "___":
+        empty_count = empty_count + 1
+
+    if middle_space == "_X_":
+        x_count = x_count + 1
+    if middle_space == "___":
+        empty_count = empty_count + 1
+
+    if bottom_space == "_X_":
+        x_count = x_count + 1
+    if bottom_space == "___":
+        empty_count = empty_count + 1
+
+    if x_count == 2 and empty_count == 1:
         if top_space == "___":
-            empty_count = empty_count + 1
-
-        if middle_space == "_X_":
-            x_count = x_count + 1
+            board["first_row"][2] = "_O_"
         if middle_space == "___":
-            empty_count = empty_count + 1
-
-        if bottom_space == "_X_":
-            x_count = x_count + 1
+            board["second_row"][1] = "_O_"
         if bottom_space == "___":
-            empty_count = empty_count + 1
+            board["third_row"][0] = "_O_"
+        computer_check_immediate_win = False
 
-        if x_count == 2 and empty_count == 1:
-            if top_space == "___":
-                board["first_row"][2] = "_O_"
-            if middle_space == "___":
-                board["second_row"][1] = "_O_"
-            if bottom_space == "___":
-                board["third_row"][0] = "_O_"
-            computer_check_immediate_win = False
-
-        x_count = 0
-        empty_count = 0
+    x_count = 0
+    empty_count = 0
 
 
 
@@ -759,6 +758,7 @@ def check_win_o():
 
 start_question = input("Would you like to play against the computer or play another person. 'computer' or 'two player': ")
 if start_question == "computer":
+    print ("test")
     print(board["first_row"])
     print(board["second_row"])
     print(board["third_row"])
@@ -776,7 +776,7 @@ if start_question == "computer":
     time.sleep(3)
     quit()
 
-if start_question == "two player":
+if start_questionc == "two player":
     print(board["first_row"])
     print(board["second_row"])
     print(board["third_row"])
