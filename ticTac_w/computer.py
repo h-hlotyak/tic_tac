@@ -143,6 +143,7 @@ def computer_win_rows():
                     looking = False  # end while loop
                 else:  # if the spot isnt empty, pass
                     pass
+        looking = False
 
     o_count = 0
     empty_count = 0
@@ -368,6 +369,8 @@ def computer_block_rows():
     """
     check for X immediate win to block
     """
+    empty_count = 0
+    x_count = 0
     # check the first row
     for spot in board["first_row"]:
         if spot == "_X_":  # if the spot is an 'O' then add 1
@@ -428,7 +431,8 @@ def computer_block_rows():
 
 def computer_block_collums():
  # checking collums for block
-
+    x_count = 0
+    empty_count = 0
     # first collum
     top_space = board["first_row"][0]
     middle_space = board["second_row"][0]
@@ -544,6 +548,8 @@ def computer_block_collums():
     empty_count = 0
 
 def computer_block_diagonal():
+    x_count = 0
+    empty_count = 0
 
     #diagonals
     '''
@@ -654,6 +660,10 @@ def computer_smart_choice():
     computer_block_collums()
 
     computer_block_diagonal()
+
+    print(board["first_row"])
+    print(board["second_row"])
+    print(board["third_row"])
 
         
       
